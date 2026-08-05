@@ -57,6 +57,3 @@ The screenshot is an unchanged uploaded artifact. It is included as correctness 
 
 - [`docs/COURSE_CONTEXT.md`](docs/COURSE_CONTEXT.md) records the supplied course context.
 
-## Privacy note
-
-Several original reports contain a student number and name because removing them would alter the source documents. Review those files before publishing the repository publicly.

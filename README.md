@@ -2,7 +2,7 @@
 
 A curated portfolio of systems-performance work covering memory locality, SIMD, OpenMP, MPI, GPU acceleration, benchmark interpretation, scientific-software builds, and inference benchmarking.
 
-The work was produced in the context of **HPC-I 2026**. It is reorganized here by engineering theme rather than by homework number. Every non-Markdown artifact listed in [`ORIGINAL_FILE_MANIFEST.tsv`](ORIGINAL_FILE_MANIFEST.tsv) is byte-for-byte identical to the uploaded file.
+The work was produced in the context of **HPC-I 2026**. It is reorganized here by engineering theme rather than by homework number.
 
 > This repository is documentation-first. Original code and reports were not rewritten, corrected, reformatted, or modernized.
 

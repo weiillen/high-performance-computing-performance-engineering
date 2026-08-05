@@ -54,10 +54,7 @@ The screenshot is an unchanged uploaded artifact. It is included as correctness 
 
 ## Repository boundaries
 
-- [`PRESERVATION_POLICY.md`](PRESERVATION_POLICY.md) explains what was not changed.
-- [`EXCLUDED_MATERIALS.md`](EXCLUDED_MATERIALS.md) explains what was left out and why.
-- [`LICENSE_AND_ATTRIBUTION.md`](LICENSE_AND_ATTRIBUTION.md) records attribution limits.
-- [`VERIFICATION.md`](VERIFICATION.md) lists checks performed while assembling the portfolio.
+
 - [`docs/COURSE_CONTEXT.md`](docs/COURSE_CONTEXT.md) records the supplied course context.
 
 ## Privacy note

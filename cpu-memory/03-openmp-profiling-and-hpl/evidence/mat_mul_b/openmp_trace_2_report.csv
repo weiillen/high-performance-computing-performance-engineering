@@ -1,0 +1,123 @@
+
+"AMD uProf (Version:5.2.606.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"./mat_mul_b"
+Command Line Arguments:
+Working Directory:,"/home/william/ch3-1_hw/HPC-I_mat-mul"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x11), Number of Cores(2)"
+Operating System:,"Linux Ubuntu 24.04.4 LTS-64 Kernel:6.8.0-110-generic"
+Collect Command:,"./AMDuProfCLI collect --trace openmp --openmp-scope full -o openmp_trace_2 ./mat_mul_b"
+Report Command:,"./AMDuProfCLI report --detail -i openmp_trace_2/AMDuProf-mat_mul_b-Custom_Apr-20-2026_18-31-05"
+
+PROFILE DETAILS
+Profile Session Type:,"Custom Profile"
+Profile Scope:,"Single Application"
+CPU Mask:,"0, 1"
+CPU Affinity Mask:,"0, 1"
+Profile Start Time:,"Mon Apr 20 18:31:06 2026"
+Profile End Time:,"Mon Apr 20 18:31:21 2026"
+Profile Duration:,"15.570 seconds"
+Data Folder:,"/home/william/ch3-1_hw/HPC-I_mat-mul/openmp_trace_2/AMDuProf-mat_mul_b-Custom_Apr-20-2026_18-31-05"
+Virtual Machine:,"Yes"
+Hypervisor Vendor:,"Linux KVM"
+Call Stack Sampling:,"False"
+Selected View:,"Time based hotspots"
+OpenMP Tracing Enabled:,"Yes"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","1.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Number Of Threads,"2"
+
+.. OPENMP SUMMARY
+.. Idle Time,"0 seconds"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME" (seconds),Module
+"mat_mul._omp_fn.0",29.1910,"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b"
+"libc.so.6!0x1a1bfa",0.0470,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"libgomp.so.1.0.0!0x256c2",0.0460,"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0"
+"libgomp.so.1.0.0!0x258a2",0.0390,"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0"
+"GOMP_parallel",0.0010,"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0"
+
+"10 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b (PID:6902)",29.3240
+
+"10 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME" (seconds)
+"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b",29.1910
+"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",0.0860
+"/usr/lib/x86_64-linux-gnu/libc.so.6",0.0470
+
+"10 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"mat_mul_b (PID:6902)",14.6790,"6902"
+"Thread-6906 (PID:6902)",14.6450,"6906"
+
+"ALL PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b (PID:6902)",29.3240
+
+
+PROFILE REPORT FOR PROCESS - /home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b (PID:6902)
+PROCESS,"CPU_TIME" (seconds)
+"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b (PID:6902)",29.3240
+
+THREAD SUMMARY
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"mat_mul_b (PID:6902)",14.6790,"6902"
+"Thread-6906 (PID:6902)",14.6450,"6906"
+
+
+MODULE SUMMARY
+MODULE,"CPU_TIME" (seconds)
+/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b,29.1910
+/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0,0.0860
+/usr/lib/x86_64-linux-gnu/libc.so.6,0.0470
+
+
+FUNCTION SUMMARY
+FUNCTION,"CPU_TIME" (seconds),MODULE
+"mat_mul._omp_fn.0",29.1910,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b
+"libc.so.6!0x1a1bfa",0.0470,/usr/lib/x86_64-linux-gnu/libc.so.6
+"libgomp.so.1.0.0!0x256c2",0.0460,/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+"libgomp.so.1.0.0!0x258a2",0.0390,/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+"GOMP_parallel",0.0010,/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+
+Function Detail Data
+Function,File,Line,SourceCode,"CPU_TIME" (seconds)
+"mat_mul._omp_fn.0",,,,29.1910
+,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b.c,19,"        for (int k = 0; k < N; k++)",0.0190
+,,20,"            for (int j = 0; j < N; j++)",2.5490
+,,21,"                c[i][j] += a[i][k] * b[k][j];",26.6230
+
+Function,"CPU_TIME" (seconds)
+"libc.so.6!0x1a1bfa" (SYSTEM MODULE FUNCTION),0.0470
+
+Function,"CPU_TIME" (seconds)
+"libgomp.so.1.0.0!0x256c2" (SYSTEM MODULE FUNCTION),0.0460
+
+Function,"CPU_TIME" (seconds)
+"libgomp.so.1.0.0!0x258a2" (SYSTEM MODULE FUNCTION),0.0390
+
+Function,"CPU_TIME" (seconds)
+"GOMP_parallel" (SYSTEM MODULE FUNCTION),0.0010
+
+
+
+PARALLEL EFFICIENCY REPORT
+Parallel Inefficiency,0.00
+.. MPI Load Balance Inefficiency,0.00
+.. MPI Communication Inefficiency,0.00
+.. Serial Region Inefficiency,0.00
+.. OpenMP Potential Gain,0.00
+.... Potential Gain:Sync,0.00
+.... Potential Gain:Other,0.00

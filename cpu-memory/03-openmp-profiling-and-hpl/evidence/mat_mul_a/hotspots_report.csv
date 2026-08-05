@@ -1,0 +1,143 @@
+
+"AMD uProf (Version:5.2.606.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"./mat_mul_a"
+Command Line Arguments:
+Working Directory:,"/home/william/ch3-1_hw/HPC-I_mat-mul"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x11), Number of Cores(2)"
+Operating System:,"Linux Ubuntu 24.04.4 LTS-64 Kernel:6.8.0-110-generic"
+Collect Command:,"./AMDuProfCLI collect --config hotspots -g -o profiles/mat_mul_a/hotspots ./mat_mul_a"
+Report Command:,"./AMDuProfCLI report --detail -i profiles/mat_mul_a/hotspots/AMDuProf-mat_mul_a-Hotspots_Apr-19-2026_20-36-55"
+
+PROFILE DETAILS
+Profile Session Type:,"Hotspots"
+Profile Scope:,"Single Application"
+CPU Mask:,"0, 1"
+CPU Affinity Mask:,"0, 1"
+Profile Start Time:,"Sun Apr 19 20:36:55 2026"
+Profile End Time:,"Sun Apr 19 20:39:24 2026"
+Profile Duration:,"149.060 seconds"
+Data Folder:,"/home/william/ch3-1_hw/HPC-I_mat-mul/profiles/mat_mul_a/hotspots/AMDuProf-mat_mul_a-Hotspots_Apr-19-2026_20-36-55"
+Virtual Machine:,"Yes"
+Hypervisor Vendor:,"Linux KVM"
+Timer Interval:,"10ms"
+Profiling Signal:,"27"
+Call Stack Sampling:,"True"
+Call Stack Overcome frame-pointer omission:,"False"
+Call Stack Unwind Depth:,"32"
+Selected View:,"Time based hotspots"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","10.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+
+DERIVED METRICS
+Metric Name,Expression,Description
+"TOTAL_CPU_TIME (s)","CPU_TIME","The CPU time spent by a function and its children."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Number Of Threads,"2"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",Module
+"mat_mul._omp_fn.0",187.6800,187.6800,"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_a"
+"libgomp.so.1.0.0!0x258a2",0.4700,0.4700,"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0"
+"libgomp.so.1.0.0!0x256c2",0.1100,0.1100,"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0"
+"libc.so.6!0x1a1bfa",0.0300,0.0300,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"write",0.0100,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"read",0.0100,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"_IO_file_xsputn",0.0000,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"_IO_file_write",0.0000,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"fwrite",0.0000,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"_IO_fread",0.0000,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+
+"10 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"mat_mul_a (PID:2322)",188.3100
+
+"10 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME" (seconds)
+"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_a",187.6800
+"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",0.5800
+"/usr/lib/x86_64-linux-gnu/libc.so.6",0.0500
+
+"10 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"mat_mul_a (PID:2322)",94.1800,"2322"
+"mat_mul_a (PID:2322)",94.1300,"2327"
+
+"ALL PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"mat_mul_a (PID:2322)",188.3100
+
+
+PROFILE REPORT FOR PROCESS - mat_mul_a (PID:2322)
+PROCESS,"CPU_TIME" (seconds)
+"mat_mul_a (PID:2322)",188.3100
+
+THREAD SUMMARY
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"mat_mul_a (PID:2322)",94.1800,"2322"
+"mat_mul_a (PID:2322)",94.1300,"2327"
+
+
+MODULE SUMMARY
+MODULE,"CPU_TIME" (seconds)
+/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_a,187.6800
+/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0,0.5800
+/usr/lib/x86_64-linux-gnu/libc.so.6,0.0500
+
+
+FUNCTION SUMMARY
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",MODULE
+"mat_mul._omp_fn.0",187.6800,187.6800,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_a
+"libgomp.so.1.0.0!0x258a2",0.4700,0.4700,/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+"libgomp.so.1.0.0!0x256c2",0.1100,0.1100,/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+"libc.so.6!0x1a1bfa",0.0300,0.0300,/usr/lib/x86_64-linux-gnu/libc.so.6
+"write",0.0100,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"read",0.0100,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"_IO_file_xsputn",0.0000,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"_IO_file_write",0.0000,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"fwrite",0.0000,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"_IO_fread",0.0000,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+
+Function Detail Data
+Function,File,Line,SourceCode,"CPU_TIME" (seconds)
+"mat_mul._omp_fn.0",,,,187.6800
+,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_a.c,19,"        for (int j = 0; j < N; j++)",0.0600
+,,20,"            for (int k = 0; k < N; k++)",187.3900
+,,21,"                c[i][j] += a[i][k] * b[k][j];",0.2300
+
+Function,"CPU_TIME" (seconds)
+"libgomp.so.1.0.0!0x258a2" (SYSTEM MODULE FUNCTION),0.4700
+
+Function,"CPU_TIME" (seconds)
+"libgomp.so.1.0.0!0x256c2" (SYSTEM MODULE FUNCTION),0.1100
+
+Function,"CPU_TIME" (seconds)
+"libc.so.6!0x1a1bfa" (SYSTEM MODULE FUNCTION),0.0300
+
+Function,"CPU_TIME" (seconds)
+"write" (SYSTEM MODULE FUNCTION),0.0100
+
+Function,"CPU_TIME" (seconds)
+"read" (SYSTEM MODULE FUNCTION),0.0100
+
+Function,"CPU_TIME" (seconds)
+"_IO_file_xsputn" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"_IO_file_write" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"fwrite" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"_IO_fread" (BINARY FILE NOT FOUND),0.0000
+

@@ -1,0 +1,285 @@
+
+"AMD uProf (Version:5.2.606.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"./run_hpl_cfg1.sh"
+Command Line Arguments:
+Working Directory:,"/home/william/hpl/bin/linux"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x11), Number of Cores(2)"
+Operating System:,"Linux Ubuntu 24.04.4 LTS-64 Kernel:6.8.0-110-generic"
+Collect Command:,"./AMDuProfCLI collect --config hotspots -g --profiling-signal 38 -o /home/william/hpl_profiles/cfg1/mpi_hotspots_sig38 ./run_hpl_cfg1.sh"
+Report Command:,"./AMDuProfCLI report --detail -i /home/william/hpl_profiles/cfg1/mpi_hotspots_sig38/AMDuProf-run_hpl_cfg1-Hotspots_Apr-19-2026_21-25-45"
+
+PROFILE DETAILS
+Profile Session Type:,"Hotspots"
+Profile Scope:,"Single Application"
+CPU Mask:,"0, 1"
+CPU Affinity Mask:,"0, 1"
+Profile Start Time:,"Sun Apr 19 21:25:45 2026"
+Profile End Time:,"Sun Apr 19 21:26:09 2026"
+Profile Duration:,"23.676 seconds"
+Data Folder:,"/home/william/hpl_profiles/cfg1/mpi_hotspots_sig38/AMDuProf-run_hpl_cfg1-Hotspots_Apr-19-2026_21-25-45"
+Virtual Machine:,"Yes"
+Hypervisor Vendor:,"Linux KVM"
+Timer Interval:,"10ms"
+Profiling Signal:,"38"
+Call Stack Sampling:,"True"
+Call Stack Overcome frame-pointer omission:,"False"
+Call Stack Unwind Depth:,"32"
+Selected View:,"Time based hotspots"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","10.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+
+DERIVED METRICS
+Metric Name,Expression,Description
+"TOTAL_CPU_TIME (s)","CPU_TIME","The CPU time spent by a function and its children."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Number Of Threads,"11"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",Module
+"rpcc",7.1700,7.1700,"/home/william/hpl/bin/linux/xhpl"
+"epoll_wait",4.2200,4.3300,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"exec_blas_async_wait",1.6500,1.6500,"/home/william/hpl/bin/linux/xhpl"
+"inner_thread",0.9700,0.9800,"/home/william/hpl/bin/linux/xhpl"
+"blas_thread_server",0.7900,8.3600,"/home/william/hpl/bin/linux/xhpl"
+"HPL_lmul",0.5700,0.5700,"/home/william/hpl/bin/linux/xhpl"
+"HPL_rand",0.3700,0.9900,"/home/william/hpl/bin/linux/xhpl"
+"[vdso]!0x00000c6a",0.3000,0.3000,"[vdso]"
+"writev",0.2900,0.2900,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"opal_progress",0.1900,6.0400,"/opt/openmpi-5.0.7/lib/libopen-pal.so.80.0.5"
+
+"10 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"xhpl (PID:3128)",9.3000
+"xhpl (PID:3129)",9.1400
+"prterun (PID:3119)",0.0100
+
+"10 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME" (seconds)
+"/home/william/hpl/bin/linux/xhpl",11.8900
+"/usr/lib/x86_64-linux-gnu/libc.so.6",4.8500
+"/opt/openmpi-5.0.7/lib/libevent_core-2.1.so.7.0.1",0.5800
+"[vdso]",0.4600
+"/opt/openmpi-5.0.7/lib/libopen-pal.so.80.0.5",0.3900
+"/opt/openmpi-5.0.7/lib/libmpi.so.40.40.7",0.2600
+"/opt/openmpi-5.0.7/lib/libevent_pthreads-2.1.so.7.0.1",0.0200
+
+"10 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"xhpl (PID:3128)",5.0500,"3128"
+"xhpl (PID:3129)",5.0300,"3129"
+"xhpl (PID:3128)",4.2500,"3133"
+"xhpl (PID:3129)",4.1100,"3135"
+"prterun (PID:3119)",0.0100,"3119"
+
+"ALL PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"xhpl (PID:3128)",9.3000
+"xhpl (PID:3129)",9.1400
+"prterun (PID:3119)",0.0100
+
+
+PROFILE REPORT FOR PROCESS - xhpl (PID:3128)
+PROCESS,"CPU_TIME" (seconds)
+"xhpl (PID:3128)",9.3000
+
+THREAD SUMMARY
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"xhpl (PID:3128)",5.0500,"3128"
+"xhpl (PID:3128)",4.2500,"3133"
+
+
+MODULE SUMMARY
+MODULE,"CPU_TIME" (seconds)
+/home/william/hpl/bin/linux/xhpl,6.2300
+/usr/lib/x86_64-linux-gnu/libc.so.6,2.3500
+/opt/openmpi-5.0.7/lib/libevent_core-2.1.so.7.0.1,0.2600
+[vdso],0.1900
+/opt/openmpi-5.0.7/lib/libopen-pal.so.80.0.5,0.1700
+/opt/openmpi-5.0.7/lib/libmpi.so.40.40.7,0.1000
+
+
+FUNCTION SUMMARY
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",MODULE
+"rpcc",3.4700,3.4700,/home/william/hpl/bin/linux/xhpl
+"epoll_wait",2.1100,2.1500,/usr/lib/x86_64-linux-gnu/libc.so.6
+"exec_blas_async_wait",0.9200,0.9200,/home/william/hpl/bin/linux/xhpl
+"inner_thread",0.6800,0.6900,/home/william/hpl/bin/linux/xhpl
+"blas_thread_server",0.5000,4.2500,/home/william/hpl/bin/linux/xhpl
+"HPL_lmul",0.2600,0.2600,/home/william/hpl/bin/linux/xhpl
+"HPL_rand",0.1800,0.4600,/home/william/hpl/bin/linux/xhpl
+"[vdso]!0x00000c6a",0.1300,0.1300,[vdso]
+"writev",0.1100,0.1100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"opal_progress",0.1000,2.8900,/opt/openmpi-5.0.7/lib/libopen-pal.so.80.0.5
+
+Function Detail Data
+Function,"CPU_TIME" (seconds)
+"rpcc" (DEBUG INFO NOT FOUND),3.4700
+
+Function,"CPU_TIME" (seconds)
+"epoll_wait" (SYSTEM MODULE FUNCTION),2.1100
+
+Function,"CPU_TIME" (seconds)
+"exec_blas_async_wait" (DEBUG INFO NOT FOUND),0.9200
+
+Function,"CPU_TIME" (seconds)
+"inner_thread" (DEBUG INFO NOT FOUND),0.6800
+
+Function,"CPU_TIME" (seconds)
+"blas_thread_server" (DEBUG INFO NOT FOUND),0.5000
+
+Function,"CPU_TIME" (seconds)
+"HPL_lmul" (DEBUG INFO NOT FOUND),0.2600
+
+Function,"CPU_TIME" (seconds)
+"HPL_rand" (DEBUG INFO NOT FOUND),0.1800
+
+Function,"CPU_TIME" (seconds)
+"[vdso]!0x00000c6a" (BINARY FILE NOT FOUND),0.1300
+
+Function,"CPU_TIME" (seconds)
+"writev" (SYSTEM MODULE FUNCTION),0.1100
+
+Function,File,Line,SourceCode,"CPU_TIME" (seconds)
+"opal_progress",,,,0.1000
+,/home/scteam03/openmpi-5.0.7/opal/runtime/opal_progress.c (SOURCE FILE NOT FOUND),220,,0.0100
+,,223,,0.0100
+,,224,,0.0100
+,,243,,0.0700
+
+
+PROFILE REPORT FOR PROCESS - xhpl (PID:3129)
+PROCESS,"CPU_TIME" (seconds)
+"xhpl (PID:3129)",9.1400
+
+THREAD SUMMARY
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"xhpl (PID:3129)",5.0300,"3129"
+"xhpl (PID:3129)",4.1100,"3135"
+
+
+MODULE SUMMARY
+MODULE,"CPU_TIME" (seconds)
+/home/william/hpl/bin/linux/xhpl,5.6600
+/usr/lib/x86_64-linux-gnu/libc.so.6,2.4900
+/opt/openmpi-5.0.7/lib/libevent_core-2.1.so.7.0.1,0.3200
+[vdso],0.2700
+/opt/openmpi-5.0.7/lib/libopen-pal.so.80.0.5,0.2200
+/opt/openmpi-5.0.7/lib/libmpi.so.40.40.7,0.1600
+/opt/openmpi-5.0.7/lib/libevent_pthreads-2.1.so.7.0.1,0.0200
+
+
+FUNCTION SUMMARY
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",MODULE
+"rpcc",3.7000,3.7000,/home/william/hpl/bin/linux/xhpl
+"epoll_wait",2.1100,2.1800,/usr/lib/x86_64-linux-gnu/libc.so.6
+"exec_blas_async_wait",0.7300,0.7300,/home/william/hpl/bin/linux/xhpl
+"HPL_lmul",0.3100,0.3100,/home/william/hpl/bin/linux/xhpl
+"blas_thread_server",0.2900,4.1100,/home/william/hpl/bin/linux/xhpl
+"inner_thread",0.2900,0.2900,/home/william/hpl/bin/linux/xhpl
+"HPL_rand",0.1900,0.5300,/home/william/hpl/bin/linux/xhpl
+"writev",0.1800,0.1800,/usr/lib/x86_64-linux-gnu/libc.so.6
+"[vdso]!0x00000c6a",0.1700,0.1700,[vdso]
+"event_base_loop",0.1300,2.6800,/opt/openmpi-5.0.7/lib/libevent_core-2.1.so.7.0.1
+
+Function Detail Data
+Function,"CPU_TIME" (seconds)
+"rpcc" (DEBUG INFO NOT FOUND),3.7000
+
+Function,"CPU_TIME" (seconds)
+"epoll_wait" (SYSTEM MODULE FUNCTION),2.1100
+
+Function,"CPU_TIME" (seconds)
+"exec_blas_async_wait" (DEBUG INFO NOT FOUND),0.7300
+
+Function,"CPU_TIME" (seconds)
+"HPL_lmul" (DEBUG INFO NOT FOUND),0.3100
+
+Function,"CPU_TIME" (seconds)
+"blas_thread_server" (DEBUG INFO NOT FOUND),0.2900
+
+Function,"CPU_TIME" (seconds)
+"inner_thread" (DEBUG INFO NOT FOUND),0.2900
+
+Function,"CPU_TIME" (seconds)
+"HPL_rand" (DEBUG INFO NOT FOUND),0.1900
+
+Function,"CPU_TIME" (seconds)
+"writev" (SYSTEM MODULE FUNCTION),0.1800
+
+Function,"CPU_TIME" (seconds)
+"[vdso]!0x00000c6a" (BINARY FILE NOT FOUND),0.1700
+
+Function,File,Line,SourceCode,"CPU_TIME" (seconds)
+"event_base_loop",,,,0.1300
+,/home/scteam03/openmpi-5.0.7/3rd-party/libevent-2.1.12-stable-ompi/event.c (SOURCE FILE NOT FOUND),470,,0.0400
+,,1934,,0.0200
+,,1951,,0.0100
+,,1977,,0.0200
+,,1994,,0.0300
+,,2023,,0.0100
+
+
+PROFILE REPORT FOR PROCESS - prterun (PID:3119)
+PROCESS,"CPU_TIME" (seconds)
+"prterun (PID:3119)",0.0100
+
+THREAD SUMMARY
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"prterun (PID:3119)",0.0100,"3119"
+
+
+MODULE SUMMARY
+MODULE,"CPU_TIME" (seconds)
+/usr/lib/x86_64-linux-gnu/libc.so.6,0.0100
+
+
+FUNCTION SUMMARY
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",MODULE
+"_Fork",0.0100,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"odls_default_fork_local_proc",0.0000,0.0100,/opt/openmpi-5.0.7/lib/libprrte.so.3.0.8
+"prte_odls_base_spawn_proc",0.0000,0.0100,/opt/openmpi-5.0.7/lib/libprrte.so.3.0.8
+"_start",0.0000,0.0100,/opt/openmpi-5.0.7/bin/prte
+"main",0.0000,0.0100,/opt/openmpi-5.0.7/bin/prte
+"event_base_loop",0.0000,0.0100,/opt/openmpi-5.0.7/lib/libevent_core-2.1.so.7.0.1
+"event_process_active_single_queue",0.0000,0.0100,/opt/openmpi-5.0.7/lib/libevent_core-2.1.so.7.0.1
+"__fork",0.0000,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"__libc_start_main",0.0000,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+
+Function Detail Data
+Function,"CPU_TIME" (seconds)
+"_Fork" (SYSTEM MODULE FUNCTION),0.0100
+
+Function,"CPU_TIME" (seconds)
+"odls_default_fork_local_proc" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"prte_odls_base_spawn_proc" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"_start" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"main" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"event_base_loop" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"event_process_active_single_queue" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"__fork" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"__libc_start_main" (BINARY FILE NOT FOUND),0.0000
+

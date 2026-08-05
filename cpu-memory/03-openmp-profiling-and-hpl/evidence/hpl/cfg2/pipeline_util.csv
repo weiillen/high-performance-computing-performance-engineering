@@ -1,0 +1,48 @@
+
+AMDuProfPcm Report
+
+Processor Name:,AMD EPYC 9654 96-Core Processor                
+System:,Family(0x19) Model(0x11) Stepping(0x1)
+Operating System:,Linux 6.8.0-110-generic
+Number of Cores :,2
+
+CPU Topology:
+Node, Core(s)
+0, 0 1
+
+Core P0 state frequency (MHz):,2400.305664
+Multiplex interval for core (ms):,1
+Sample interval (ms):,1000
+Data Collection Driver:,Linux Perf Driver
+NMI Watchdog Enabled:,0
+Version:,5.2.606.0 (PUBLIC)
+
+Hypervisor Info:
+Hypervisor Enabled:,True
+Hypervisor Supported:,True
+Hypervisor Vendor:,Linux KVM
+Command:,"AMDuProfPcm -m pipeline_util -o /home/william/hpl_profiles/cfg2/pipeline_util.csv -- ./run_hpl_cfg1.sh"
+
+Abbreviation :
+IPC    : Instructions Per CPU Cycle
+CPI    : CPU Cycles Per Instructions
+pti    : Per Thousand Instructions
+ptc    : Per Thousand CPU Cycles
+pto    : Per Thousand Operations
+Topdown metrics are reported in "% slots"
+
+Profile Time: 2026/04/19 21:31:34:781
+CORE METRICS,,,,,,,,,,,,,,
+System (Aggregated),,,,,,,,,,,,,,
+Total_Dispatch_Slots,SMT_Disp_contention,Frontend_Bound,Bad_Speculation,Backend_Bound,Retiring,Frontend_Bound.Latency,Frontend_Bound.BW,Bad_Speculation.Mispredicts,Bad_Speculation.Pipeline_Restarts,Backend_Bound.Memory,Backend_Bound.CPU,Retiring.Fastpath,Retiring.Microcode,
+66122778720.00,0.00,33.15,0.94,25.97,41.22,22.34,10.81,0.93,0.01,19.91,6.06,32.22,9.00,
+153450658830.00,0.00,27.37,1.36,22.47,40.06,11.37,15.99,1.36,0.00,17.05,5.42,24.64,15.42,
+152764353126.00,0.00,37.81,0.70,27.03,40.42,27.71,10.10,0.70,0.00,20.94,6.09,32.32,8.10,
+153565185510.00,0.00,37.47,0.73,19.11,40.28,26.04,11.43,0.73,0.00,14.54,4.57,30.59,9.69,
+153899562786.00,0.00,38.46,0.65,22.87,38.91,27.61,10.85,0.65,0.00,16.97,5.90,29.95,8.96,
+154162830558.00,0.00,35.23,0.77,21.05,39.44,23.58,11.66,0.77,0.00,16.11,4.94,29.30,10.14,
+154358843874.00,0.00,32.69,0.60,20.75,39.35,19.31,13.38,0.60,0.00,15.79,4.96,27.20,12.15,
+154359780486.00,0.00,33.67,0.74,27.40,38.82,20.60,13.07,0.74,0.00,21.30,6.10,27.08,11.74,
+153125688684.00,0.00,34.14,0.76,32.60,38.05,20.38,13.77,0.76,0.00,25.89,6.71,25.45,12.60,
+154649767308.00,0.00,36.83,0.83,24.27,38.09,24.97,11.86,0.83,0.00,18.56,5.71,27.78,10.31,
+152979423894.00,0.00,28.51,0.85,27.04,39.43,13.47,15.04,0.85,0.00,20.34,6.70,25.13,14.30,

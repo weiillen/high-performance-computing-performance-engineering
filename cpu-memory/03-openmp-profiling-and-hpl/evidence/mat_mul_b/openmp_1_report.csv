@@ -1,0 +1,133 @@
+
+"AMD uProf (Version:5.2.606.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"./mat_mul_b"
+Command Line Arguments:
+Working Directory:,"/home/william/ch3-1_hw/HPC-I_mat-mul"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x11), Number of Cores(2)"
+Operating System:,"Linux Ubuntu 24.04.4 LTS-64 Kernel:6.8.0-110-generic"
+Collect Command:,"./AMDuProfCLI collect --config hotspots -g -o profiles/mat_mul_b/openmp_1 ./mat_mul_b"
+Report Command:,"./AMDuProfCLI report --detail -i profiles/mat_mul_b/openmp_1/AMDuProf-mat_mul_b-Hotspots_Apr-19-2026_21-09-31"
+
+PROFILE DETAILS
+Profile Session Type:,"Hotspots"
+Profile Scope:,"Single Application"
+CPU Mask:,"0, 1"
+CPU Affinity Mask:,"0, 1"
+Profile Start Time:,"Sun Apr 19 21:09:31 2026"
+Profile End Time:,"Sun Apr 19 21:10:00 2026"
+Profile Duration:,"29.586 seconds"
+Data Folder:,"/home/william/ch3-1_hw/HPC-I_mat-mul/profiles/mat_mul_b/openmp_1/AMDuProf-mat_mul_b-Hotspots_Apr-19-2026_21-09-31"
+Virtual Machine:,"Yes"
+Hypervisor Vendor:,"Linux KVM"
+Timer Interval:,"10ms"
+Profiling Signal:,"27"
+Call Stack Sampling:,"True"
+Call Stack Overcome frame-pointer omission:,"False"
+Call Stack Unwind Depth:,"32"
+Selected View:,"Time based hotspots"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","10.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+
+DERIVED METRICS
+Metric Name,Expression,Description
+"TOTAL_CPU_TIME (s)","CPU_TIME","The CPU time spent by a function and its children."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Number Of Threads,"1"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",Module
+"mat_mul._omp_fn.0",28.7300,28.7300,"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b"
+"libc.so.6!0x1a1bfa",0.0500,0.0500,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"read",0.0200,0.0200,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"syscall",0.0100,0.0100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"_IO_fread",0.0000,0.0200,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"__libc_start_main",0.0000,28.8100,"/usr/lib/x86_64-linux-gnu/libc.so.6"
+"GOMP_parallel",0.0000,28.7300,"/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0"
+"_start",0.0000,28.8100,"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b"
+"main",0.0000,28.8100,"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b"
+
+"10 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"mat_mul_b (PID:2776)",28.8100
+
+"10 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME" (seconds)
+"/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b",28.7300
+"/usr/lib/x86_64-linux-gnu/libc.so.6",0.0800
+
+"10 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"mat_mul_b (PID:2776)",28.8100,"2776"
+
+"ALL PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"mat_mul_b (PID:2776)",28.8100
+
+
+PROFILE REPORT FOR PROCESS - mat_mul_b (PID:2776)
+PROCESS,"CPU_TIME" (seconds)
+"mat_mul_b (PID:2776)",28.8100
+
+THREAD SUMMARY
+THREAD,"CPU_TIME" (seconds),THREAD ID
+"mat_mul_b (PID:2776)",28.8100,"2776"
+
+
+MODULE SUMMARY
+MODULE,"CPU_TIME" (seconds)
+/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b,28.7300
+/usr/lib/x86_64-linux-gnu/libc.so.6,0.0800
+
+
+FUNCTION SUMMARY
+FUNCTION,"CPU_TIME" (seconds),"TOTAL_CPU_TIME (s)",MODULE
+"mat_mul._omp_fn.0",28.7300,28.7300,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b
+"libc.so.6!0x1a1bfa",0.0500,0.0500,/usr/lib/x86_64-linux-gnu/libc.so.6
+"read",0.0200,0.0200,/usr/lib/x86_64-linux-gnu/libc.so.6
+"syscall",0.0100,0.0100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"_IO_fread",0.0000,0.0200,/usr/lib/x86_64-linux-gnu/libc.so.6
+"__libc_start_main",0.0000,28.8100,/usr/lib/x86_64-linux-gnu/libc.so.6
+"GOMP_parallel",0.0000,28.7300,/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+"_start",0.0000,28.8100,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b
+"main",0.0000,28.8100,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b
+
+Function Detail Data
+Function,File,Line,SourceCode,"CPU_TIME" (seconds)
+"mat_mul._omp_fn.0",,,,28.7300
+,/home/william/ch3-1_hw/HPC-I_mat-mul/mat_mul_b.c,20,"            for (int j = 0; j < N; j++)",2.3600
+,,21,"                c[i][j] += a[i][k] * b[k][j];",26.3700
+
+Function,"CPU_TIME" (seconds)
+"libc.so.6!0x1a1bfa" (SYSTEM MODULE FUNCTION),0.0500
+
+Function,"CPU_TIME" (seconds)
+"read" (SYSTEM MODULE FUNCTION),0.0200
+
+Function,"CPU_TIME" (seconds)
+"syscall" (SYSTEM MODULE FUNCTION),0.0100
+
+Function,"CPU_TIME" (seconds)
+"_IO_fread" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"__libc_start_main" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"GOMP_parallel" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"_start" (BINARY FILE NOT FOUND),0.0000
+
+Function,"CPU_TIME" (seconds)
+"main" (BINARY FILE NOT FOUND),0.0000
+

@@ -1,0 +1,50 @@
+
+AMDuProfPcm Report
+
+Processor Name:,AMD EPYC 9654 96-Core Processor                
+System:,Family(0x19) Model(0x11) Stepping(0x1)
+Operating System:,Linux 6.8.0-110-generic
+Number of Cores :,2
+
+CPU Topology:
+Node, Core(s)
+0, 0 1
+
+Core P0 state frequency (MHz):,2400.210205
+Multiplex interval for core (ms):,1
+Sample interval (ms):,1000
+Data Collection Driver:,Linux Perf Driver
+NMI Watchdog Enabled:,0
+Version:,5.2.606.0 (PUBLIC)
+
+Hypervisor Info:
+Hypervisor Enabled:,True
+Hypervisor Supported:,True
+Hypervisor Vendor:,Linux KVM
+Command:,"AMDuProfPcm -m pipeline_util -o /home/william/hpl_profiles/cfg1/pipeline_util.csv -- ./run_hpl_cfg1.sh"
+
+Abbreviation :
+IPC    : Instructions Per CPU Cycle
+CPI    : CPU Cycles Per Instructions
+pti    : Per Thousand Instructions
+ptc    : Per Thousand CPU Cycles
+pto    : Per Thousand Operations
+Topdown metrics are reported in "% slots"
+
+Profile Time: 2026/04/19 21:24:28:998
+CORE METRICS,,,,,,,,,,,,,,
+System (Aggregated),,,,,,,,,,,,,,
+Total_Dispatch_Slots,SMT_Disp_contention,Frontend_Bound,Bad_Speculation,Backend_Bound,Retiring,Frontend_Bound.Latency,Frontend_Bound.BW,Bad_Speculation.Mispredicts,Bad_Speculation.Pipeline_Restarts,Backend_Bound.Memory,Backend_Bound.CPU,Retiring.Fastpath,Retiring.Microcode,
+118601642124.00,0.00,30.85,0.81,28.87,44.18,20.22,10.62,0.80,0.01,21.91,6.96,35.12,9.06,
+156627930672.00,0.00,34.62,0.80,18.00,37.38,20.67,13.96,0.80,0.00,13.64,4.36,24.58,12.80,
+156746815422.00,0.00,32.90,0.61,27.08,41.64,20.51,12.39,0.61,0.00,20.97,6.11,30.55,11.09,
+156696540072.00,0.00,33.14,1.08,25.91,39.54,20.02,13.12,1.08,0.00,19.55,6.36,27.66,11.88,
+155744565060.00,0.00,28.53,0.51,23.32,42.90,15.34,13.19,0.51,0.00,18.06,5.26,30.55,12.35,
+157444494900.00,0.00,33.47,0.87,21.15,40.26,21.07,12.39,0.87,0.00,16.38,4.77,29.16,11.10,
+156574852200.00,0.00,37.97,0.71,24.86,39.13,26.49,11.48,0.71,0.00,19.25,5.61,29.39,9.74,
+156915199326.00,0.00,37.01,0.55,28.07,40.30,25.63,11.39,0.55,0.00,21.97,6.10,30.60,9.70,
+156486778500.00,0.00,36.11,0.74,26.33,39.03,23.52,12.59,0.74,0.00,20.58,5.75,27.83,11.20,
+155895821730.00,0.00,36.83,0.75,23.45,40.92,26.00,10.83,0.75,0.00,18.05,5.40,31.84,9.08,
+156146953434.00,0.00,28.08,0.93,25.45,40.14,12.77,15.31,0.93,0.00,19.79,5.66,25.49,14.65,
+155826855966.00,0.00,38.47,0.86,22.13,39.73,27.96,10.52,0.86,0.00,16.67,5.46,31.04,8.69,
+154672284228.00,0.00,35.35,0.61,26.42,43.58,25.43,9.92,0.61,0.00,20.23,6.19,35.31,8.27,
